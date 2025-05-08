@@ -5,11 +5,6 @@ import VideoResult from '../VideoResultComponent/VideoResult';
 import MakeSearchWarning from '../MakeSearchWarning/MakeSearchWarning';
 
 
-function searchVideos() {
-
-    
-} 
-
 export default function SearchBar() {
   
   const [videoResults, setVideoResults] = React.useState(null);
