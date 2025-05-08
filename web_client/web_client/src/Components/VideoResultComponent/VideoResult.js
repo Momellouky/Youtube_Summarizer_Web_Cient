@@ -9,7 +9,7 @@ export default function VideoResult(props) {
         // Get the number of videos in the props
         const videoKeys = Object.keys(props.videos);
         const videoCount = videoKeys.length;
-        console.log('Video count:', videoCount);
+
         // Get the current index of the videoId
         const currentIndex = videoId.split('_')[1]; 
         
@@ -18,19 +18,11 @@ export default function VideoResult(props) {
             return;
         }
 
-        console.log('Current index:', currentIndex);
         // Calculate the next index
         const nextIndex = 'video_' + (currentIndex + 1) % videoCount;
-        console.log('Next index:', nextIndex);
         // Set the videoId to the next index
         setVideoId(nextIndex);
     }
-
-    console.log('VideoResult props:', props.videos);
-    console.log('VideoResult props video_0 keys:', Object.keys(props.videos['video_0']));
-    console.log('Video Result props video_0 video thumbnail:', props.videos['video_0']['video_thumbnail']);
-    console.log('Video Result props video_0 video title:', props.videos['video_0']['video_title']);
-    console.log('Video Result props video_0 summary:', props.videos['video_0']['summary']);
 
   return (
     
